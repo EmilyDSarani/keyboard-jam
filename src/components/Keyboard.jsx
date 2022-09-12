@@ -15,43 +15,46 @@ import {
 
 export default function Keyboard() {
   function handleKeyPress(event) {
-    if (event.key === "A") {
+    //javascript keydown was having a bit of issue
+    if (event.key === 'a' || 'A') {
       playC4();
     }
-    if (event.key === "S") {
+    if (event.key === "s" || 'S') {
       playD4();
     }
-    if (event.key === "D") {
+    if (event.key === "d") {
       playAb4();
     }
-    if (event.key === "F") {
+    if (event.key === "f") {
       playF4();
     }
-    if (event.key === "G") {
+    if (event.key === "g") {
       playE4();
     }
-    if (event.key === "H") {
+    if (event.key === "h") {
       playG4();
     }
-    if (event.key === "K") {
+    if (event.key === "j") {
       playB4();
     }
-    if (event.key === "T") {
+    if (event.key === "l") {
       playGb4();
     }
-    if (event.key === "J") {
+    if (event.key === ";") {
       playBb4();
     }
-    if (event.key === "E") {
+    if (event.key === "'") {
       playDb4();
     }
-    if (event.key === "W") {
+    if (event.key === "q") {
       playC5();
     }
   }
 
   return (
     <div>
+      <h1>Keyboard Jam</h1>
+      <div onKeyDown={handleKeyPress}></div>
       <fieldset>
         <legend> Testing </legend>
         <label>Keyboard Form </label>
