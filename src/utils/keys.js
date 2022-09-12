@@ -12,6 +12,10 @@ export function playC4(){
     const synth = new Tone.Synth().toDestination();
     synth.triggerAttackRelease("E4", "8n");
   }
+  export function playEb4(){
+    const synth = new Tone.Synth().toDestination();
+    synth.triggerAttackRelease("Eb4", "8n");
+  }
   export function playF4(){
     const synth = new Tone.Synth().toDestination();
     synth.triggerAttackRelease("F4", "8n");
@@ -24,7 +28,10 @@ export function playC4(){
     const synth = new Tone.Synth().toDestination();
     synth.triggerAttackRelease("Ab4", "8n");
   }
-  
+  export function playA4(){
+    const synth = new Tone.Synth().toDestination();
+    synth.triggerAttackRelease("A4", "8n");
+  }
   export function  playB4(){
     const synth = new Tone.Synth().toDestination();
     synth.triggerAttackRelease("B4", "8n");
@@ -44,4 +51,16 @@ export function playC4(){
   export function playC5(){
     const synth = new Tone.Synth().toDestination();
     synth.triggerAttackRelease("C5", "8n");
+  }
+  export function playCb5(){
+    const synth = new Tone.Synth().toDestination();
+    synth.triggerAttackRelease("Cb5", "8n");
+  }
+  export function playD5(){
+    const synth = new Tone.Synth().toDestination();
+    synth.triggerAttackRelease("D5", "8n");
+  }
+  export function playE5(){
+    const synth = new Tone.Synth().toDestination();
+    synth.triggerAttackRelease("E5", "8n");
   }

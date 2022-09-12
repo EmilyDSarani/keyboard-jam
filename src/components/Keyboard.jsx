@@ -1,9 +1,11 @@
 import React from "react";
 import {
   playAb4,
+  playA4,
   playC4,
   playD4,
   playE4,
+  playEb4,
   playF4,
   playG4,
   playBb4,
@@ -11,43 +13,62 @@ import {
   playGb4,
   playB4,
   playDb4,
+  playCb5,
+  playD5,
+  playE5,
 } from "../utils/keys";
 
 export default function Keyboard() {
   function handleKeyPress(event) {
-    //javascript keydown was having a bit of issue
-    if (event.key === 'a' || 'A') {
+    //javascript keyCode number was having a bit of issue
+    if (event.key === 'a' ) {
       playC4();
     }
-    if (event.key === "s" || 'S') {
+    if (event.key === "w") {
+      playDb4();
+    }
+    if (event.key === "s" ) {
       playD4();
     }
     if (event.key === "d") {
-      playAb4();
+      playE4();
     }
+    if (event.key === "e") {
+      playEb4();
+    }
+    //EB4
     if (event.key === "f") {
       playF4();
     }
-    if (event.key === "g") {
-      playE4();
-    }
-    if (event.key === "h") {
-      playG4();
-    }
-    if (event.key === "j") {
-      playB4();
-    }
-    if (event.key === "l") {
+    if (event.key === "t") {
       playGb4();
     }
-    if (event.key === ";") {
+    if (event.key === "g") {
+      playG4();
+    }
+    if (event.key === "y") {
+      playAb4();
+    }
+    if (event.key === "j") {
+      playA4();
+    }
+    if (event.key === "h") {
+      playB4();
+    }
+    if (event.key === "u") {
       playBb4();
     }
-    if (event.key === "'") {
-      playDb4();
-    }
-    if (event.key === "q") {
+    if (event.key === "k") {
       playC5();
+    }
+    if (event.key === "i") {
+      playCb5();
+    }
+    if (event.key === "l") {
+      playD5();
+    }
+    if (event.key === ";") {
+      playE5();
     }
   }
 
