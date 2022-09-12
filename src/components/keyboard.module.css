@@ -1,0 +1,31 @@
+.piano{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+h1{
+    text-align: center;
+}
+.whiteKey{
+    border: 1px solid black;
+    width: 100px;
+    height: 400px;
+    background-color: white;
+}
+.whiteKey:hover{
+    background-color: aqua;
+    cursor: pointer;
+    
+}
+.blackKey{
+    border: 1px solid white;
+    width: 100px;
+    height: 400px;
+    background-color: black;
+    font-style: white;
+}
+.blackKey:hover{
+    background-color: maroon;
+    cursor: pointer;
+    
+}

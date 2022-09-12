@@ -17,11 +17,13 @@ import {
   playD5,
   playE5,
 } from "../utils/keys";
+import styles from './keyboard.module.css'
 
 export default function Keyboard() {
+  
   function handleKeyPress(event) {
     //javascript keyCode number was having a bit of issue
-    if (event.key === 'a' ) {
+    if (event.keyCode === 'a' ) {
       playC4();
     }
     if (event.key === "w") {
@@ -73,14 +75,17 @@ export default function Keyboard() {
   }
 
   return (
-    <div>
-      <h1>Keyboard Jam</h1>
-      <div onKeyDown={handleKeyPress}></div>
-      <fieldset>
+      <div onKeyPress={handleKeyPress}>
+    <div className={styles.piano}>
+      <div className={styles.whiteKey} onClick={playC4}>A</div>
+      <div className={styles.blackKey} onClick={playDb4}>W</div>
+      </div>
+      {/* <div onKeyDown={handleKeyPress}></div> */}
+      {/* <fieldset>
         <legend> Testing </legend>
         <label>Keyboard Form </label>
         <input type="text" onKeyPress={handleKeyPress} />
-      </fieldset>
+      </fieldset> */}
     </div>
   );
 }
