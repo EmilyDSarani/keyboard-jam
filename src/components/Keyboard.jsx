@@ -27,7 +27,7 @@ export default function Keyboard() {
   function handleKeyPress(event) {
     //javascript keyCode number was having a bit of issue
     if (event.key === 'a' ) {
-      highLightKey('C4');
+      highLightKey('c4');
     }
     // if (event.key === "w") {
     //   playDb4();
@@ -90,7 +90,15 @@ export default function Keyboard() {
     const element = document.getElementById(note)
     console.log('I AM AN ELEMENT', element)
     element.style.opacity = '.2'
-    synth.triggerAttackRelease(note, "8n");
+    element.style.borderRadius = '15px'
+    element.style.backgroundColor = 'red'
+    const noteFreq = Tone.Frequency(note)
+    synth.triggerAttackRelease(noteFreq, "8n");
+    setTimeout(() => {
+      element.style.opacity = '1'
+      element.style.borderRadius = '0px'
+      element.style.backgroundColor = 'white'
+    }, 1000)
     
 
   }
