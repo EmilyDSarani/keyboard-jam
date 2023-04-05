@@ -29,51 +29,37 @@ export default function Keyboard() {
     if (event.key === 'a' ) {
       highLightKey('c4');
     }
-    // if (event.key === "w") {
-    //   playDb4();
-    // }
-    // if (event.key === "s" ) {
-    //   playD4();
-    // }
-    // if (event.key === "d") {
-    //   playE4();
-    // }
-    // if (event.key === "e") {
-    //   playEb4();
-    // }
-    // if (event.key === "f") {
-    //   playF4();
-    // }
-    // if (event.key === "t") {
-    //   playGb4();
-    // }
-    // if (event.key === "g") {
-    //   playG4();
-    // }
-    // if (event.key === "y") {
-    //   playAb4();
-    // }
-    // if (event.key === "j") {
-    //   playA4();
-    // }
-    // if (event.key === "h") {
-    //   playB4();
-    // }
-    // if (event.key === "u") {
-    //   playBb4();
-    // }
-    // if (event.key === "k") {
-    //   playC5();
-    // }
-    // if (event.key === "i") {
-    //   playCb5();
-    // }
-    // if (event.key === "l") {
-    //   playD5();
-    // }
-    // if (event.key === ";") {
-    //   playE5();
-    // }
+    if (event.key === "w") {
+      highLightKey('db4');
+    }
+    if (event.key === "s" ) {
+      highLightKey('d4');
+    }
+    if (event.key === "d") {
+    highLightKey('e4');
+    }
+    if (event.key === "e") {
+      highLightKey('eb4');
+    }
+    if (event.key === "f") {
+    highLightKey('f4');
+    }
+ 
+    if (event.key === "j") {
+    highLightKey('a4');
+    }
+    if (event.key === "k") {
+    highLightKey('ab4');
+    }
+    if (event.key === "u") {
+      highLightKey('gb4');
+    }
+    if (event.key === "l") {
+    highLightKey('b4');
+    }
+    if (event.key === "o") {
+    highLightKey('bb4');
+    }
   }
 
   //problem 1, how to get keydown to work without the input
@@ -91,13 +77,13 @@ export default function Keyboard() {
     console.log('I AM AN ELEMENT', element)
     element.style.opacity = '.2'
     element.style.borderRadius = '15px'
-    element.style.backgroundColor = 'red'
+    element.style.boxShadow = '0 0 60px 30px #fff,  0 0 100px 60px #f0f, 0 0 140px 90px #0ff'
     const noteFreq = Tone.Frequency(note)
     synth.triggerAttackRelease(noteFreq, "8n");
     setTimeout(() => {
       element.style.opacity = '1'
       element.style.borderRadius = '0px'
-      element.style.backgroundColor = 'white'
+      element.style.boxShadow = 'none'
     }, 1000)
     
 
@@ -106,15 +92,17 @@ export default function Keyboard() {
   return (
      
     <div className={styles.piano}>
-      <div className={styles.whiteKey} onKeyDown={handleKeyPress} tabIndex={0} id="c4">A</div>
-      {/* <div className={styles.blackKey} onClick={playDb4}>W</div> */}
-
-
-      {/* {/* <fieldset>
-        <legend> Testing </legend>
-        <label>Keyboard Form </label>
-        <input type="text" onKeyPress={handleKeyPress} />
-      </fieldset> */}
+      <div className={styles.whiteKey} id="c4">A</div>
+      <div className={styles.blackKey} id="db4">W</div>
+      <div className={styles.whiteKey} id="d4">S</div>
+      <div className={styles.blackKey} id="e4">D</div>
+      <div className={styles.whiteKey} id="eb4">E</div>
+      <div className={styles.blackKey} id="f4">F</div>
+      <div className={styles.whiteKey} id="gb4">U</div>
+      <div className={styles.whiteKey} id="ab4">K</div>
+      <div className={styles.blackKey} id="a4">J</div>
+      <div className={styles.whiteKey} id="b4">L</div>
+      <div className={styles.blackKey} id="bb4">O</div>
     </div>
   );
 }
